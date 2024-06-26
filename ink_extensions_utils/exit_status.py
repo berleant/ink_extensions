@@ -26,6 +26,6 @@ def run(func, *args, **kwargs):
         return func(*args, **kwargs)
     except SystemExit as se:
         if (se.args == (None,) or se.args == ()): # if quit(), exit(), or sys.exit() was called w/o args
-            sys.exit("\nIt is probable that an error occurred in the inkscape software.")
+            sys.exit("\nAn error occurred")
         else: # SystemExit was raised with an error code. Just let it happen.
             raise se
